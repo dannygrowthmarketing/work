@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here to Scale — selected performance marketing work. Live reports, case studies, and growth systems by Danny Deepak.">
+<meta property="og:title" content="Here to Scale — Selected Work">
+<meta property="og:description" content="Live performance reports, case studies and growth systems. Google Ads · Meta · SEO · Analytics.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0d0d0d">
+<title>Here to Scale — Selected Work</title>
+<style>
+  :root{
+    --ink:#0d0d0d; --deep:#131311; --card:#171714; --card2:#161613;
+    --paper:#faf9f6; --stone:#8a8578; --faint:#6b675d; --hair:rgba(250,249,246,.14);
+    --gold:#a8863d; --gold-hi:#c9a55a; --indigo:#6366f1; --green:#5a8a68;
+    --serif:"Didot","Bodoni MT","Playfair Display",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--ink);color:var(--paper);font-family:var(--sans);
+    font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:56px 0 46px;border-bottom:1px solid var(--hair)}
+  #sky{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+  .hero .in{position:relative}
+  .row1{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;
+    border-bottom:1px solid var(--hair);padding-bottom:14px}
+  .brand{font-weight:800;font-size:15px;letter-spacing:.32em}
+  .brand em{color:var(--gold);font-style:normal}
+  .row1 .tag{font-size:10px;letter-spacing:.24em;color:var(--stone);text-transform:uppercase}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(52px,10vw,104px);
+    line-height:.96;margin:34px 0 12px}
+  h1 em{font-style:italic;color:var(--gold)}
+  .deck{font-size:14.5px;color:var(--stone);max-width:560px;letter-spacing:.02em}
+  .stats{display:flex;gap:0;margin-top:38px;border-top:1px solid var(--hair);flex-wrap:wrap}
+  .st{padding:20px 34px 4px 0}
+  .st + .st{border-left:1px solid var(--hair);padding-left:34px}
+  .st .v{font-family:var(--serif);font-size:37px;line-height:1}
+  .st .v em{font-style:italic;color:var(--gold)}
+  .st .l{font-size:9.5px;font-weight:700;letter-spacing:.2em;color:var(--stone);
+    text-transform:uppercase;margin-top:8px}
+
+  /* ---------- section ---------- */
+  .kick{margin:52px 0 8px;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:14px}
+  .kick .eyebrow{font-size:10px;font-weight:700;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+  .kick h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,5vw,36px);margin-top:6px}
+  .filters{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    padding:7px 14px;border:1px solid var(--hair);color:var(--stone);cursor:pointer;
+    background:transparent;transition:all .25s ease;font-family:var(--sans)}
+  .chip:hover{border-color:var(--gold);color:var(--gold)}
+  .chip.on{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+
+  /* ---------- cards ---------- */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .proj{position:relative;border:1px solid var(--hair);background:linear-gradient(160deg,#161614,#111110);
+    padding:26px 26px 22px;display:flex;flex-direction:column;min-height:290px;
+    transition:transform .35s ease, border-color .35s ease, opacity .3s ease;
+    transform-style:preserve-3d;will-change:transform}
+  .proj:hover{border-color:rgba(168,134,61,.55)}
+  .proj.hide{display:none}
+  .proj .no{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--faint);
+    line-height:1;transition:color .3s}
+  .proj:hover .no{color:var(--gold)}
+  .proj .kind{position:absolute;top:28px;right:26px;font-size:9px;font-weight:800;
+    letter-spacing:.2em;color:var(--stone);text-transform:uppercase;
+    border:1px solid var(--hair);padding:4px 9px}
+  .proj h3{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.15;margin:16px 0 8px}
+  .proj p{font-size:12.5px;color:var(--stone);line-height:1.65;flex:1}
+  .proj .tags{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 18px}
+  .proj .t{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--faint);border:1px solid var(--hair);padding:3px 8px}
+  .proj .cta{display:flex;justify-content:space-between;align-items:center;
+    border-top:1px solid var(--hair);padding-top:16px;font-size:11px;font-weight:800;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .proj .cta .arr{transition:transform .3s ease}
+  .proj:hover .cta .arr{transform:translateX(6px)}
+  .proj.ghost{border-style:dashed;opacity:.55;justify-content:center;align-items:center;
+    text-align:center;gap:8px}
+  .proj.ghost:hover{opacity:.85;transform:none}
+  .proj.ghost .gh-t{font-family:var(--serif);font-style:italic;font-size:23px;color:var(--stone)}
+  .proj.ghost .gh-s{font-size:10.5px;letter-spacing:.2em;color:var(--faint);text-transform:uppercase}
+
+  /* ---------- about strip ---------- */
+  .about{margin-top:56px;border:1px solid var(--hair);padding:30px;display:grid;
+    grid-template-columns:1.4fr 1fr;gap:30px;background:linear-gradient(160deg,#151512,#101010)}
+  .about h3{font-family:var(--serif);font-weight:400;font-size:26px;margin-bottom:10px}
+  .about h3 em{font-style:italic;color:var(--gold)}
+  .about p{font-size:13px;color:var(--stone);line-height:1.7}
+  .links{display:flex;flex-direction:column;gap:0;border-left:1px solid var(--hair);padding-left:30px}
+  .links a{display:flex;justify-content:space-between;align-items:center;padding:13px 0;
+    border-bottom:1px solid var(--hair);font-size:12px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--paper);transition:color .25s,padding-left .25s}
+  .links a:last-child{border-bottom:none}
+  .links a:hover{color:var(--gold);padding-left:8px}
+  .links a span{color:var(--faint);font-weight:400;letter-spacing:0;text-transform:none}
+
+  .foot{text-align:center;padding:44px 0 36px;font-size:10px;letter-spacing:.18em;
+    color:var(--faint);text-transform:uppercase}
+  .foot b{color:var(--gold)}
+
+  /* count-up dim until seen */
+  .st .v{opacity:0;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease}
+  .st .v.seen{opacity:1;transform:none}
+
+  @media(max-width:760px){
+    .grid{grid-template-columns:1fr}
+    .about{grid-template-columns:1fr}
+    .links{border-left:none;padding-left:0;border-top:1px solid var(--hair);padding-top:8px}
+    .stats{gap:0}
+    .st{padding-right:22px}
+    .st + .st{padding-left:22px}
+    .st .v{font-size:29px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <canvas id="sky"></canvas>
+  <div class="wrap in">
+    <div class="row1">
+      <span class="brand">HERE<em> TO </em>SCALE</span>
+      <span class="tag">SELECTED WORK · PERFORMANCE MARKETING</span>
+    </div>
+    <h1>Work that <em>ships,</em><br>numbers that hold.</h1>
+    <p class="deck">Live client reports, case studies and growth systems — Google Ads, Meta, SEO and analytics, built and published as working pages, not slideware.</p>
+    <div class="stats">
+      <div class="st"><div class="v" data-count="6" data-suffix="+ yrs">0</div><div class="l">In performance</div></div>
+      <div class="st"><div class="v" data-count="42" data-prefix="₹" data-suffix="Cr+">0</div><div class="l">Revenue tracked</div></div>
+      <div class="st"><div class="v" data-count="71" data-prefix="−" data-suffix="%">0</div><div class="l">CPC engineered down</div></div>
+      <div class="st"><div class="v" data-count="20" data-suffix="×">0</div><div class="l">Peak ROAS</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="kick">
+    <div>
+      <div class="eyebrow">The Shelf</div>
+      <h2>Live projects</h2>
+    </div>
+    <div class="filters" id="filters"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <div class="about">
+    <div>
+      <h3>Built by <em>Danny Deepak</em></h3>
+      <p>Performance marketing consultant operating as Here to Scale — Bengaluru, working worldwide.
+      Six-plus years across Google Ads, Meta, LinkedIn, SEO, GA4 and marketing analytics, for B2B SaaS,
+      multi-location retail and lead-gen businesses. Every project on this page is a real, live artefact:
+      open it, scroll it, check the numbers.</p>
+    </div>
+    <div class="links" id="links"></div>
+  </div>
+</main>
+
+<div class="foot"><b>HERE TO SCALE</b> · GOOGLE ADS · META ADS · SEO · ANALYTICS · MMXXVI</div>
+
+<script>
+/* ============================================================
+   EDIT HERE — projects, links. Everything renders from these.
+   url marked  verify:true  → double-check the slug before push.
+   ============================================================ */
+const PROJECTS = [
+  {
+    no: "01",
+    kind: "Monthly Report",
+    cat: "reports",
+    title: "The June Report — 16-Location Retail Network",
+    desc: "Full-month performance issue: Google Ads, GBP, Meta lead-gen and POS in one editorial report. 18-month MQL → SQL table, per-store scorecards, budget ledgers, and the calling-gap analysis.",
+    tags: ["Google Ads", "Meta Ads", "GBP", "MQL → SQL"],
+    url: "https://dannygrowthmarketing.github.io/toniguy-june-2026-report/",
+    cta: "Read the issue",
+  },
+  {
+    no: "02",
+    kind: "Case Study",
+    cat: "case-studies",
+    title: "Google Ads for a Florida Public Adjusting Firm",
+    desc: "Lead-generation build for a claims-services firm in a high-CPC legal-adjacent market: account architecture, negative discipline, and qualified-lead economics.",
+    tags: ["Google Ads", "Lead Gen", "Local Service"],
+    url: "https://dannygrowthmarketing.github.io/foremost-pa-case-study/", // verify:true
+    cta: "Open case study",
+  },
+  {
+    no: "03",
+    kind: "Portfolio",
+    cat: "portfolio",
+    title: "Interactive Résumé & Immersive Case Studies",
+    desc: "Résumé as a product: Three.js hero scenes, Chart.js data stories and draggable visualisations — a salon-network constellation and a watch-market gear movement.",
+    tags: ["Three.js", "Chart.js", "Storytelling"],
+    url: "https://dannygrowthmarketing.github.io/resume/", // verify:true
+    cta: "View portfolio",
+  },
+];
+
+const GHOST = { title: "The July Issue", sub: "In production — lands early August" };
+
+const LINKS = [
+  { label: "GitHub", note: "dannygrowthmarketing", url: "https://github.com/dannygrowthmarketing" },
+  { label: "LinkedIn", note: "danny-growth-strategist", url: "https://www.linkedin.com/in/danny-growth-strategist" },
+  { label: "Site", note: "dannygrowthmarketing.com", url: "https://dannygrowthmarketing.com" },
+];
+
+/* ---------- render cards ---------- */
+const grid = document.getElementById("grid");
+PROJECTS.forEach(p => {
+  const a = document.createElement("a");
+  a.className = "proj";
+  a.href = p.url; a.target = "_blank"; a.rel = "noopener";
+  a.dataset.cat = p.cat;
+  a.innerHTML = `
+    <span class="no">${p.no}</span>
+    <span class="kind">${p.kind}</span>
+    <h3>${p.title}</h3>
+    <p>${p.desc}</p>
+    <div class="tags">${p.tags.map(t => `<span class="t">${t}</span>`).join("")}</div>
+    <div class="cta"><span>${p.cta}</span><span class="arr">→</span></div>`;
+  grid.appendChild(a);
+});
+const ghost = document.createElement("div");
+ghost.className = "proj ghost"; ghost.dataset.cat = "reports";
+ghost.innerHTML = `<div class="gh-t">${GHOST.title}</div><div class="gh-s">${GHOST.sub}</div>`;
+grid.appendChild(ghost);
+
+/* ---------- render links ---------- */
+document.getElementById("links").innerHTML = LINKS.map(l =>
+  `<a href="${l.url}" target="_blank" rel="noopener">${l.label}<span>${l.note}</span></a>`).join("");
+
+/* ---------- filters ---------- */
+const CATS = [["all","All"],["reports","Reports"],["case-studies","Case Studies"],["portfolio","Portfolio"]];
+const fEl = document.getElementById("filters");
+CATS.forEach(([id, label], i) => {
+  const b = document.createElement("button");
+  b.className = "chip" + (i === 0 ? " on" : "");
+  b.textContent = label; b.dataset.f = id;
+  b.onclick = () => {
+    fEl.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
+    b.classList.add("on");
+    document.querySelectorAll(".proj").forEach(card =>
+      card.classList.toggle("hide", id !== "all" && card.dataset.cat !== id));
+  };
+  fEl.appendChild(b);
+});
+
+/* ---------- count-up stats on scroll ---------- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target; io.unobserve(el);
+    el.classList.add("seen");
+    const end = +el.dataset.count, pre = el.dataset.prefix || "", suf = el.dataset.suffix || "";
+    const t0 = performance.now(), dur = 1400;
+    (function tick(t) {
+      const k = Math.min((t - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - k, 3);
+      el.innerHTML = pre + Math.round(end * eased) + `<em>${suf}</em>`;
+      if (k < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+}, { threshold: .6 });
+document.querySelectorAll(".st .v").forEach(el => io.observe(el));
+
+/* ---------- card tilt ---------- */
+document.querySelectorAll(".proj:not(.ghost)").forEach(card => {
+  card.addEventListener("mousemove", e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - .5;
+    const y = (e.clientY - r.top) / r.height - .5;
+    card.style.transform = `perspective(900px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg) translateY(-3px)`;
+  });
+  card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+});
+
+/* ---------- hero canvas: drifting gold constellation + sparkline ---------- */
+const cv = document.getElementById("sky"), cx = cv.getContext("2d");
+let W, H, pts = [];
+function size() {
+  const r = cv.parentElement.getBoundingClientRect();
+  W = cv.width = r.width * devicePixelRatio; H = cv.height = r.height * devicePixelRatio;
+  cv.style.width = r.width + "px"; cv.style.height = r.height + "px";
+  pts = Array.from({ length: Math.min(46, r.width / 24) }, () => ({
+    x: Math.random() * W, y: Math.random() * H,
+    vx: (Math.random() - .5) * .18 * devicePixelRatio,
+    vy: (Math.random() - .5) * .14 * devicePixelRatio,
+    r: (Math.random() * 1.3 + .5) * devicePixelRatio,
+    g: Math.random() < .18,
+  }));
+}
+size(); addEventListener("resize", size);
+(function draw() {
+  cx.clearRect(0, 0, W, H);
+  const link = 110 * devicePixelRatio;
+  for (let i = 0; i < pts.length; i++) {
+    const p = pts[i];
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0 || p.x > W) p.vx *= -1;
+    if (p.y < 0 || p.y > H) p.vy *= -1;
+    for (let j = i + 1; j < pts.length; j++) {
+      const q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = Math.hypot(dx, dy);
+      if (d < link) {
+        cx.strokeStyle = `rgba(250,249,246,${(1 - d / link) * .07})`;
+        cx.lineWidth = devicePixelRatio * .6;
+        cx.beginPath(); cx.moveTo(p.x, p.y); cx.lineTo(q.x, q.y); cx.stroke();
+      }
+    }
+    cx.fillStyle = p.g ? "rgba(168,134,61,.8)" : "rgba(250,249,246,.35)";
+    cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, 7); cx.fill();
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>
